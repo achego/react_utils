@@ -1,0 +1,26 @@
+{
+  "orders": [
+    {
+      "ingredients": {
+        "salad": 1,
+        "bacon": 0,
+        "cheese": 1,
+        "meat": 1
+      },
+      "price": 6.5,
+      "customer": {
+        "name": "Belema",
+        "email": "tamunobelema@gmail.com",
+        "address": "10 Enugu street Portharcourt"
+      },
+      "deliveryMethod": "Fastest",
+      "id": 1
+    }
+  ],
+  "ingredients": {
+    "salad": 0,
+    "bacon": 0,
+    "cheese": 0,
+    "meat": 0
+  }
+}

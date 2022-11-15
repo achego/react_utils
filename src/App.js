@@ -1,13 +1,15 @@
 import React from 'react'
-import Layout from './components/Layout/Layout'
-import BurgerBuilder from './screens/BurgerBuilder/BurgerBuilder'
+import DisPlayCP from './ChildParentRel/DisPlayCP'
+import MyCustomForm from './FormVailidation/CustomForm/MyCustomForm'
+import Display from './FormVailidation/CustomFormRedefined/Display'
+import FormTestTwo from './FormVailidation/Form2/FormTestTwo'
 
 const App = () => {
   return (
     <div>
-      <Layout>
-        <BurgerBuilder />
-      </Layout>
+      {/* <FormTestTwo /> */}
+      <Display />
+      {/* <DisPlayCP /> */}
     </div>
   )
 }
