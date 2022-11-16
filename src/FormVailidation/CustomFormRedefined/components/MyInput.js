@@ -1,20 +1,21 @@
+//  The name property and validator property is required for form validation
+
 import React from "react";
 
-const MyInput = ({ name, title, validator, formProps }) => {
+const MyInput = ({ name, title, validator, formProps, className, titleStyle, inputStyle, ...props }) => {
   return (
-    <div>
-      {title && <p>{title}</p>}
+    <div className={`flex flex-col items-start ${className}`}>
+      {title && <p className={ `text-slate-800 font-semibold ${titleStyle}`}>{title}</p>}
       <input
+      {...props}
         name={name}
-        className="border border-slate-900"
-        onChange={(e) => {
-            formProps.isValid({...formProps.errors, [name]:validator(e.target.value)})
-            formProps.validate(name, validator(e.target.value));
-            formProps.handleChange(e);
+        className={`w-full h-9 px-3 outline-none rounded-lg text-gray-700 ${inputStyle}`}
+        onChange={(event) => {
+            formProps.handleChange(event);
         }}
       />
 
-      {formProps.errors[name] && <p className="text-red-800">{formProps.errors[name]}</p>}
+      {formProps!=null?(formProps.errors[name] && <p className="text-red-800 text-[13px] font-semibold slide_in">{formProps.errors[name]}</p>):null}
     </div>
   );
 };
